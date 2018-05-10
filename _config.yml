@@ -1,0 +1,77 @@
+
+# SITE CONFIGURATION
+baseurl: "" # the subpath of your site, e.g. /blog/ (optional)
+url: "http://tyrantdavis.me" # the base hostname & protocol for your site
+
+# THEME-SPECIFIC CONFIGURATION
+theme_settings:
+  # Meta
+  title: Tyrant Davis
+  description: "A personal software engineering and development portfolio and blog website"
+
+  # Header and footer text
+  header_text: >
+     <h1>Fun & Creative Software Developer</h1>
+     <p>I build applications for business and life solutions.</p>
+  header_text_feature_image:
+  footer_text: >
+    Brought To You By: <b class="w3-text-black">The Night Life</b>
+  footer_text_too: >
+    Powered by <a href="http://jekyllrb.com">Jekyll</a>.
+# Icons
+  rss: false
+  email_address: "tyrantdavisengineer@gmail.com"
+  behance:
+  bitbucket:
+  dribbble:
+  facebook:
+  flickr:
+  github: "tyrantdavis"
+  google_plus:
+  instagram:
+  linkedin:  "https://www.linkedin.com/in/tyrantdavis/"
+  pinterest:
+  reddit:
+  soundcloud:
+  stack_exchange:  # Full URL
+  steam:
+  tumblr:
+  twitter: "tyrant_davis"
+  wordpress:
+  youtube:
+
+  # Scripts
+  google_analytics: "UA-113296559-1"
+  disqus_shortname:
+  katex: true # Enable if using math markup
+
+  # Localization strings
+  str_follow_on: "Follow on"
+  str_rss_follow: "Follow RSS feed"
+  str_email: "Email"
+  str_next: "Next"
+  str_prev: "Prev"
+  str_continue_reading: "Read more &raquo;"
+
+  # Colours, typography and padding
+  # Open the "_sass > base" folder, and open "_variables.scss"
+  google_fonts: "Lato:300,400,700,300italic,700italic|Abril+Fatface"
+
+# PAGINATION
+paginate: 100
+paginate_path: "blog/page:num"
+
+# COLLECTIONS
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
+
+# BUILD SETTINGS
+markdown: kramdown
+
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+plugins: [jekyll-paginate]

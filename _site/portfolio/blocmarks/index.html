@@ -1,0 +1,268 @@
+<p class="center"><img src="/img/blocMarks/homePostSignOut.png" alt="" /></p>
+
+<h3 class="wide">Summary</h3>
+<p>Build a bookmarking application that allows users to bookmark URLs via email, view other user’s bookmark and keep a personal list of bookmarks.</p>
+
+<h3 class="wide">Explanation</h3>
+
+<p>Bookmarking is easy, but keeping a bookmark collection tidy and manageable is no so easy. Sharing bookmarks from your browser is not so easy either. Blockmarks addresses and resolves the issues mentioned by categorizing bookmarks according to topics. Blockmarks also makes bookmarks public so that other users can discover and add bookmarks to their profile.</p>
+
+<h3 class="wide">Problem</h3>
+<p>This project was meant to expand upon my backend knowledge and skills, particularly Ruby on Rials. Primary objective was for me to meet all of the predefined user requirements.</p>
+
+<h3 class="wide">User Requirements</h3>
+
+<ol>
+  <li>Allow user to sign up for a free account by providing a user name, password and email</li>
+  <li>Allow users to sign in and out of Blockmarks</li>
+  <li>Allow users to email a URL to Blocmarks and have it saved in the Blocmarks database</li>
+  <li>Allow users to see an index of all topics and their bookmarks</li>
+  <li>Allow users to create, read, update, and delete bookmarks</li>
+  <li>Allow users to be the only one allowed to delete and update my bookmarks</li>
+  <li>Allow users to “like and unlike” bookmarks created by other users</li>
+  <li>Allow users to see a list of bookmarks on my personal profile that I’ve added or liked</li>
+</ol>
+
+<h3 class="wide">Solution</h3>
+<p>a new Rails app was generated to start the project . Next I configured the default gems for my project and generated a welcome controller for a landing page which welcomes users to the application. I added <em>Bootstrap</em> to make styling the application easier . Finally I configured <em>git</em> and <em>Github</em> workflow for collaboration. The aforementioned steps are the initial steps for every project of course.</p>
+
+<p>Once the foundation for the app was laid I incorporated and configured <em>Devise</em> for authentication. This step involved generating a Devise User model.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rails g devise user
+</code></pre></div></div>
+
+<p><strong>Rails</strong> generated a migration file as a result. To run the migrations I executed the following:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rake db:migrate
+</code></pre></div></div>
+<p>This allowed users to sign up for the application and send emails for confirmation.</p>
+
+<p>I used the <em>Devise</em> helper method <code class="highlighter-rouge">user_signed_in?</code> for sign-in sign-out capabilities.  This determined if a user was signed in and rendered a particular view based on a <em>boolean</em> response. The navigation links <span style="color:blue">Edit Profile</span> and <span style="color:blue">Sign Out</span> indicated a user was signed in.</p>
+
+<p><img src="/img/blocMarks/editUser.png" alt="Edit Profile" /></p>
+
+<p>The user saw the <span style="color:blue">Sign Up</span> or <span style="color:blue">Sign In</span> navigation links if not signed in.  I used a <em>Devise</em> filter method to redirect users that are not signed in to the login page  . The <code class="highlighter-rouge">except [:index, :about]</code> syntax removes login requirement to see the index and about pages.</p>
+
+<p>app/controllers/application_controller.rb</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">before_action</span> <span class="ss">:authenticate_user!</span><span class="p">,</span> <span class="ss">except: </span><span class="p">[</span><span class="ss">:index</span><span class="p">,</span> <span class="ss">:about</span><span class="p">]</span></code></pre></figure>
+
+<p>I generated a UsersController which included a <strong>#show</strong> action to allow signed-in users to see their profile page .  I updated the root path in <strong>routes.rb</strong> to map to the users show view to redirect the user to their show view after <span style="color:blue">Sign In</span>.</p>
+
+<p>My next task was to allow a user to see an index of all Topics and their bookmarks. A <strong>Topic</strong> model that associated with a user was generated to address this need.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rails g model Topic name:string user:references:index
+</code></pre></div></div>
+
+<p>By referencing the <strong>User</strong> model a ` belongs_to :user` relationship was created on the <strong>Topic</strong> model.</p>
+
+<p><strong>app/model/topic.rb</strong></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Topic</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">belongs_to</span> <span class="ss">:user</span>
+<span class="o">...</span>
+
+<span class="k">end</span></code></pre></figure>
+
+<p>An <code class="highlighter-rouge">has_many :topics</code> relationship was established on the <strong>User</strong> model.</p>
+
+<p>app/models/user.rb</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+<span class="o">...</span>
+
+   <span class="n">has_many</span> <span class="ss">:topics</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>Next I generated a <strong>Bookmark</strong> model and associated bookmarks with topics.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rails g model Bookmark url:string topic:references:index
+</code></pre></div></div>
+
+<p>app/models/bookmark.rb</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Bookmark</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">belongs_to</span> <span class="ss">:topic</span>
+  <span class="o">...</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>I generated a <strong>Topics</strong> controller with <strong>#index</strong>, <strong>#show</strong>, <strong>#new</strong>, <strong>#edit</strong> actions.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rails g controller Topics index show new edit
+</code></pre></div></div>
+
+<p><img src="/img/blocMarks/newTopic.png" alt="New Topic" /></p>
+
+<p>I implemented <span style="color:red">C</span>reat<span style="color:red">R</span>ead<span style="color:red">U</span>pdate<span style="color:red">D</span>estroy for topics frm there.</p>
+
+<p>I then implemented <span style="color:red">CRUD</span> for bookmarks. I generated a <strong>Bookmarks</strong> controller with <strong>#show</strong>, <strong>#new</strong>, <strong>#edit</strong> actions. No index action was created for the <strong>BookmarksController</strong> given that the topics show view handles the rendering.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rails g controller Bookmarks show new edit
+</code></pre></div></div>
+
+<p>It was important to nest <strong>Bookmarks</strong> resource under the <strong>Topics</strong> resource to make this work.</p>
+
+<p><strong>routes.rb</strong></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">...</span>
+  <span class="n">resources</span> <span class="ss">:topics</span> <span class="o">...</span>
+    <span class="n">resources</span> <span class="ss">:bookmarks</span><span class="p">,</span> <span class="ss">except: </span><span class="p">[</span><span class="ss">:index</span><span class="p">]</span> <span class="o">...</span>
+  <span class="o">...</span>
+  <span class="k">end</span>
+<span class="o">...</span>  </code></pre></figure>
+
+<p>I implemented <span style="color:red">CRUD</span> for bookmarks after completing the above actions to ensure users could create new bookmarks, view, update and delete created bookmarks.</p>
+
+<p>My next focus was allowing users to email a <span style="color:blue">URL</span>s to <strong>Blocmarks</strong> and have it saved in the <strong>Blocmarks</strong> database.I implemented <em>Mailgun</em> to accomplish this task. I modified the <strong>#create</strong> action in <strong>IncomingController</strong> to process incoming emails and convert them to bookmarks .</p>
+
+<p>I integrated <em>Pundit</em> into the application to handle authorization. This was necessary to only allow  users to update or delete bookmarks belonging to them. This meant adding the <em>Pundit</em> gem to my <strong>Gemfile</strong> and bundling the gem.</p>
+
+<p><strong>Gemfile</strong></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">...</span>
+  <span class="n">gem</span> <span class="s1">'pundit'</span>
+<span class="o">...</span></code></pre></figure>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle
+</code></pre></div></div>
+
+<p>I included Pundit in the ApplicationController.</p>
+
+<p><strong>app/controllers/application_controller.rb</strong></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">ApplicationController</span> <span class="o">&lt;</span> <span class="no">ActionController</span><span class="o">::</span><span class="no">Base</span>
+   <span class="kp">include</span> <span class="no">Pundit</span>
+   <span class="o">...</span></code></pre></figure>
+
+<p>I generated a default policy file with the following command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rails g pundit:install
+</code></pre></div></div>
+
+<p>Next I defined <strong>#create</strong>, <strong>#update#</strong>, and <strong>#destroy</strong> actions in the <strong>application_policy.rb</strong> policy file</p>
+
+<p><strong>app/policies/application_policy.rb</strong></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">   <span class="k">def</span> <span class="nf">create?</span>
+     <span class="n">user</span><span class="p">.</span><span class="nf">present?</span>
+   <span class="k">end</span>
+
+   <span class="k">def</span> <span class="nf">update?</span>
+     <span class="n">user</span><span class="p">.</span><span class="nf">present?</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="nf">user</span> <span class="o">==</span> <span class="n">user</span><span class="p">)</span>
+   <span class="k">end</span>
+
+   <span class="k">def</span> <span class="nf">destroy?</span>
+     <span class="n">user</span><span class="p">.</span><span class="nf">present?</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="nf">user</span> <span class="o">==</span> <span class="n">user</span><span class="p">)</span>
+   <span class="k">end</span></code></pre></figure>
+
+<p>I created a similar policy file for bookmarks and added authorization to <strong>BookmarksController</strong> and its controller views.</p>
+
+<p>I created a like model to give users the ability to like a bookmark. Because liked bookmarks had to be associated with the user who flagged them and the bookmarks that were  marked as a like, a separate <strong>Like</strong> model was generated with <strong>bookmark</strong> and <strong>user</strong> references. The <strong>like table</strong> served as a a <strong>join table</strong>, which represents the relationship between the two objects/ tables <strong>user</strong> and <strong>bookmark</strong>.  I associated <strong>Likes</strong> with <strong>Users</strong> and <strong>Bookmarks</strong> by adding a <code class="highlighter-rouge">has_many</code> to the <strong>user</strong> and <strong>bookmark</strong> models <strong><em>user.rb</em></strong> and <strong><em>bookmark.rb</em></strong> respectively. I added a <code class="highlighter-rouge">dependent: :destroy</code> option for <strong>user</strong> and <strong>bookmark</strong> models to ensure that an instance of the <strong>Like</strong> model was associated.</p>
+
+<p>I created a <strong>#liked</strong>  method to determine if a user has liked a bookmark. It allows users to toggle between <span style="color:blue">like</span> and <span style="color:blue">unlike</span> links in views.</p>
+
+<p>app/models/user.rb</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">...</span>
+   <span class="k">def</span> <span class="nf">liked</span><span class="p">(</span><span class="n">bookmark</span><span class="p">)</span>
+     <span class="n">likes</span><span class="p">.</span><span class="nf">where</span><span class="p">(</span><span class="ss">bookmark_id: </span><span class="n">bookmark</span><span class="p">.</span><span class="nf">id</span><span class="p">).</span><span class="nf">first</span>
+   <span class="k">end</span>
+<span class="o">...</span></code></pre></figure>
+
+<p>This method receives a <strong>bookmark</strong> object and produces a <strong>like</strong> object if there is a record in the <strong>likes table</strong> that is properly identified with a <strong>user_id</strong> and a  <strong>bookmark_id</strong>. <strong>Nil</strong> is returned otherwise.</p>
+
+<p>A likes controller was generated next.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rails g controller Likes index
+</code></pre></div></div>
+
+<p>Required routes were added to routes.rb.</p>
+
+<p><strong>config/routes.rb</strong></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">   <span class="n">resources</span> <span class="ss">:bookmarks</span><span class="p">,</span> <span class="ss">except: </span><span class="p">[</span><span class="ss">:index</span><span class="p">]</span> <span class="k">do</span>
+     <span class="n">resources</span> <span class="ss">:likes</span><span class="p">,</span> <span class="ss">only: </span><span class="p">[</span><span class="ss">:index</span><span class="p">,</span> <span class="ss">:create</span><span class="p">,</span> <span class="ss">:destroy</span><span class="p">]</span></code></pre></figure>
+
+<p>A likes  index was created to render a list of all bookmarks.</p>
+
+<p>I built a partial to display links for liking bookmarks in the <strong>app/views/likes/</strong> folder. I added the following <strong>erb</strong> syntax to my views to render the partial :</p>
+
+<figure class="highlight"><pre><code class="language-erb" data-lang="erb">     <span class="cp">&lt;%=</span> <span class="n">render</span> <span class="ss">partial: </span><span class="s1">'likes/like'</span><span class="p">,</span> <span class="ss">locals: </span><span class="p">{</span> <span class="ss">bookmark: </span><span class="vi">@bookmark</span> <span class="p">}</span> <span class="cp">%&gt;</span></code></pre></figure>
+
+<p>Create and destroy methods were added to the LikesController.</p>
+
+<p><strong>app/controllers/likes_controller.rb</strong></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">create</span>
+  <span class="vi">@bookmark</span> <span class="o">=</span> <span class="no">Bookmark</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="ss">:bookmark_id</span><span class="p">])</span>
+  <span class="vi">@topic</span> <span class="o">=</span> <span class="vi">@bookmark</span><span class="p">.</span><span class="nf">topic</span>
+  <span class="n">like</span> <span class="o">=</span> <span class="n">current_user</span><span class="p">.</span><span class="nf">likes</span><span class="p">.</span><span class="nf">build</span><span class="p">(</span><span class="ss">bookmark: </span><span class="vi">@bookmark</span><span class="p">)</span>
+  <span class="n">authorize</span> <span class="n">like</span>
+
+  <span class="k">if</span> <span class="n">like</span><span class="p">.</span><span class="nf">save</span>
+    <span class="n">flash</span><span class="p">[</span><span class="ss">:notice</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Bookmark successfully liked."</span>
+    <span class="n">redirect_to</span> <span class="p">[</span><span class="vi">@topic</span><span class="p">,</span> <span class="vi">@bookmark</span><span class="p">]</span>
+  <span class="k">else</span>
+    <span class="n">flash</span><span class="p">[</span><span class="ss">:error</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Bookamrk like failed."</span>
+    <span class="n">redirect_to</span> <span class="p">[</span><span class="vi">@topic</span><span class="p">,</span> <span class="vi">@bookmark</span>  <span class="p">]</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">def</span> <span class="nf">destroy</span>
+  <span class="c1"># Get the bookmark from the params</span>
+  <span class="vi">@bookmark</span> <span class="o">=</span> <span class="no">Bookmark</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="ss">:bookmark_id</span><span class="p">])</span>
+  <span class="vi">@topic</span> <span class="o">=</span> <span class="vi">@bookmark</span><span class="p">.</span><span class="nf">topic</span>
+  <span class="c1"># Find the current user's like with the ID in the params</span>
+  <span class="n">like</span> <span class="o">=</span> <span class="n">current_user</span><span class="p">.</span><span class="nf">likes</span><span class="p">.</span><span class="nf">build</span><span class="p">(</span><span class="ss">bookmark: </span><span class="vi">@bookmark</span><span class="p">)</span>
+  <span class="n">authorize</span> <span class="n">like</span>
+
+
+  <span class="k">if</span> <span class="n">like</span><span class="p">.</span><span class="nf">destroy</span>
+    <span class="c1"># Flash success and redirect to @bookmark</span>
+    <span class="n">flash</span><span class="p">[</span><span class="ss">:notice</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Bookmark successfully unliked."</span>
+    <span class="n">redirect_to</span> <span class="p">[</span><span class="vi">@topic</span><span class="p">,</span> <span class="vi">@bookmark</span><span class="p">]</span>
+  <span class="k">else</span>
+    <span class="c1"># Flash error and redirect to @bookmark</span>
+    <span class="n">flash</span><span class="p">[</span><span class="ss">:error</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Unlike failed. Please try again."</span>
+    <span class="n">redirect_to</span> <span class="p">[</span><span class="vi">@topic</span><span class="p">,</span> <span class="vi">@bookmark</span><span class="p">]</span>
+  <span class="k">end</span></code></pre></figure>
+
+<p>A policy for likes was then added. Authorization for the <strong>LikeContorller</strong> was added in addition to an authorized like prior to the <strong>IF</strong>  statements in the <strong>#create</strong> and <strong>#destroy</strong>  actions. Authorization had to be added to the partial as well.</p>
+
+<p><strong>app/views/likes/_like.html.erb</strong></p>
+
+<figure class="highlight"><pre><code class="language-erb" data-lang="erb"> <span class="cp">&lt;%</span> <span class="k">if</span> <span class="n">policy</span><span class="p">(</span><span class="no">Like</span><span class="p">.</span><span class="nf">new</span><span class="p">).</span><span class="nf">create?</span> <span class="cp">%&gt;</span>
+   <span class="nt">&lt;div&gt;</span>
+     <span class="cp">&lt;%</span> <span class="k">if</span> <span class="n">like</span> <span class="o">=</span> <span class="n">current_user</span><span class="p">.</span><span class="nf">liked</span><span class="p">(</span><span class="n">bookmark</span><span class="p">)</span> <span class="cp">%&gt;</span>
+       <span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="p">[</span><span class="n">bookmark</span><span class="p">,</span> <span class="n">like</span><span class="p">],</span> <span class="ss">class: </span><span class="s1">'btn btn-danger'</span><span class="p">,</span> <span class="ss">method: :delete</span> <span class="k">do</span> <span class="cp">%&gt;</span>
+         <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-star-empty"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;</span><span class="ni">&amp;nbsp;</span> Unlike
+       <span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
+     <span class="cp">&lt;%</span> <span class="k">else</span> <span class="cp">%&gt;</span>
+       <span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="p">[</span><span class="n">bookmark</span><span class="p">,</span> <span class="no">Like</span><span class="p">.</span><span class="nf">new</span><span class="p">],</span> <span class="ss">class: </span><span class="s1">'btn btn-primary'</span><span class="p">,</span> <span class="ss">method: :post</span> <span class="k">do</span> <span class="cp">%&gt;</span>
+         <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-star"</span><span class="nt">&gt;</span> <span class="nt">&lt;/i&gt;</span><span class="ni">&amp;nbsp;</span> like
+       <span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
+     <span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
+ <span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span></code></pre></figure>
+
+<p>Lastly, I generated a <strong>Users controller</strong> to allow users to see a list of added or liked bookmarks on their profile pages.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rails g controller Users show
+</code></pre></div></div>
+<p>Required routes were also added.</p>
+
+<p><strong>config/routes.rb</strong></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">devise_for</span> <span class="ss">:users</span>
+ <span class="n">resources</span> <span class="ss">:users</span><span class="p">,</span> <span class="ss">only: </span><span class="p">[</span><span class="ss">:show</span><span class="p">]</span></code></pre></figure>
+
+<p>A <strong>#show</strong> action was added to the UsersController to produce instance variables containing bookmarks the user has created and liked.</p>
+
+<p>I gave users the ability to unlike bookmarks on the personal page as a final touch.</p>
+
+<h3 class="wide">Results</h3>
+<blockquote>
+  <p>All user requirements met and working as expected.</p>
+</blockquote>
+
+<h3 class="wide">Conclusion</h3>
+
+<p>This was another fun application to build.  I especially enjoyed implementing Omniauth strategies to allow for multi-provider authentication. There was no need to even consider building my own authentication when the Omniauth gem makes things very easy, but that s something I could have done. The following are some other things I could have done differently:</p>
+<ol>
+  <li>I could have used HAML instead of ERB for templating</li>
+  <li>allow users to see previews for bookmarks</li>
+  <li>parse the bookmark into readable urls. These are some great features to add in the future.</li>
+</ol>
