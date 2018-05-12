@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: posts
 published: true
 ---
 {:.center}

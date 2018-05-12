@@ -1,7 +1,7 @@
 ---
 layout: post
 title: taSk!
-thumbnail-path: "/taSkLandingcopy.png"
+thumbnail-path: ""
 #short-description: Build a self-destructing to-do list application.
 
 ---

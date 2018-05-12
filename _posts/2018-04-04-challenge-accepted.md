@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: Challenge Accepted!!
 ---
 <h3 class="center">Challenges faced while learning to develop.</h3>
