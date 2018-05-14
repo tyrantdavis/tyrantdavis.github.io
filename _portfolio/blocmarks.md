@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: OnYourMark
 thumbnail-path: ""
 short-description: "· Production quality SaaS based CRUD wiki application built on Rails.   · User authentication: Devise, authorization: Pundit, payments: Stripe"

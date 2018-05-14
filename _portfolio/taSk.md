@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts 
 title: taSk!
 thumbnail-path: ""
 short-description: "·   Self-destructing to-do list Rails app that automatically deletes tasks older than 7 days.

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: DoUpedia
 thumbnail-path: ""
 short-description: "· Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet sagittis ante, sed fringilla elit.   · Nulla consectetur ligula at turpis blandit, et cursus dui posuere. Integer tellus tellus, pharetra malesuada sagittis nec, mollis eget neque. "
