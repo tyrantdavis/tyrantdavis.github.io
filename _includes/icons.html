@@ -1,0 +1,161 @@
+{% if site.theme_settings.rss %}
+<div class="w3-bar-item">
+	<a href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" title="{{ site.theme_settings.str_rss_follow }}">
+		<i class="fa fa-fw fa-rss"></i>
+	</a>
+</div>
+{% endif %}
+
+{% if site.theme_settings.email_address %}
+	{% if layout != default %}
+<div class="w3-bar-item">
+	<a href="mailto:{{ site.theme_settings.email_address }}" title="{{ site.theme_settings.str_email }}">
+		<i class="fa fa-fw fa-envelope w3-magenta"></i>
+	</a>
+</div>
+	{% endif %}
+{% endif %}
+
+{% if site.theme_settings.behance %}
+<div class="w3-bar-item">
+	<a href="https://www.behance.net/{{ site.theme_settings.behance }}" title="{{ site.theme_settings.str_follow_on }} Behance">
+		<i class="fa fa-fw fa-behance"></i>
+	</a>
+</div>
+{% endif %}
+
+{% if site.theme_settings.bitbucket %}
+<div class="w3-bar-item">
+	<a href="https://bitbucket.org/{{ site.theme_settings.bitbucket }}" title="{{ site.theme_settings.str_follow_on }} Bitbucket">
+		<i class="fa fa-fw fa-bitbucket"></i>
+	</a>
+</div>
+{% endif %}
+
+{% if site.theme_settings.dribbble %}
+<div class="w3-bar-item">
+	<a href="https://dribbble.com/{{ site.theme_settings.dribbble }}" title="{{ site.theme_settings.str_follow_on }} Dribbble">
+		<i class="fa fa-fw fa-dribbble"></i>
+	</a>
+</div>
+{% endif %}
+
+{% if site.theme_settings.facebook %}
+<div class="w3-bar-item">
+	<a href="https://www.facebook.com/{{ site.theme_settings.facebook }}" title="{{ site.theme_settings.str_follow_on }} Facebook">
+		<i class="fa fa-fw fa-facebook"></i>
+	</a>
+</div>
+{% endif %}
+
+{% if site.theme_settings.flickr %}
+<div class="w3-bar-item">
+	<a href="https://www.flickr.com/photos/{{ site.theme_settings.flickr }}" title="{{ site.theme_settings.str_follow_on }} Flickr">
+		<i class="fa fa-fw fa-flickr"></i>
+	</a>
+</div>
+{% endif %}
+
+{% if site.theme_settings.github %}
+<div class="w3-bar-item">
+	<a href="https://github.com/{{ site.theme_settings.github }}" title="{{ site.theme_settings.str_follow_on }} GitHub">
+		<i class="fa fa-fw fa-github w3-text-night"></i>
+	</a>
+</div>
+{% endif %}
+
+{% if site.theme_settings.google_plus %}
+<div class="w3-bar-item">
+	<a href="https://plus.google.com/{{ site.theme_settings.google_plus }}" title="{{ site.theme_settings.str_follow_on }} Google+">
+		<i class="fa fa-fw fa-google-plus"></i>
+	</a>
+</div>
+{% endif %}
+
+{% if site.theme_settings.instagram %}
+<div class="w3-bar-item">
+	<a href="http://instagram.com/{{ site.theme_settings.instagram }}" title="{{ site.theme_settings.str_follow_on }} Instagram">
+		<i class="fa fa-fw fa-instagram"></i>
+	</a>
+</div>
+{% endif %}
+
+{% if site.theme_settings.linkedin %}
+<div class="w3-bar-item">
+	<a href="{{ site.theme_settings.linkedin }}" title="{{ site.theme_settings.str_follow_on }} LinkedIn">
+		<i class="fa fa-fw fa-linkedin w3-text-cyan"></i>
+	</a>
+</div>
+{% endif %}
+
+{% if site.theme_settings.pinterest %}
+<div class="w3-bar-item">
+	<a href="http://www.pinterest.com/{{ site.theme_settings.pinterest }}" title="{{ site.theme_settings.str_follow_on }} Pinterest">
+		<i class="fa fa-fw fa-pinterest"></i>
+	</a>
+</div>
+{% endif %}
+
+{% if site.theme_settings.reddit %}
+<div class="w3-bar-item">
+	<a href="https://www.reddit.com/user/{{ site.theme_settings.reddit }}" title="{{ site.theme_settings.str_follow_on }} Reddit">
+		<i class="fa fa-fw fa-reddit"></i>
+	</a>
+</div>
+{% endif %}
+
+{% if site.theme_settings.soundcloud %}
+<div class="w3-bar-item">
+	<a href="https://soundcloud.com/{{ site.theme_settings.soundcloud }}" title="{{ site.theme_settings.str_follow_on }} SoundCloud">
+		<i class="fa fa-fw fa-soundcloud"></i>
+	</a>
+</div>
+{% endif %}
+
+{% if site.theme_settings.stack_exchange %}
+<div class="w3-bar-item">
+	<a href="{{ site.theme_settings.stack_exchange }}" title="{{ site.theme_settings.str_follow_on }} Stack Exchange">
+		<i class="fa fa-fw fa-stack-exchange"></i>
+	</a>
+</div>
+{% endif %}
+
+{% if site.theme_settings.steam %}
+<div class="w3-bar-item">
+	<a href="http://steamcommunity.com/id/{{ site.theme_settings.steam }}" title="{{ site.theme_settings.str_follow_on }} Steam">
+		<i class="fa fa-fw fa-steam"></i>
+	</a>
+</div>
+{% endif %}
+
+{% if site.theme_settings.tumblr %}
+<div class="w3-bar-item">
+	<a href="http://{{ site.theme_settings.tumblr }}.tumblr.com/" title="{{ site.theme_settings.str_follow_on }} Tumblr">
+		<i class="fa fa-fw fa-tumblr"></i>
+	</a>
+</div>
+{% endif %}
+
+{% if site.theme_settings.twitter %}
+<div class="w3-bar-item">
+	<a href="https://twitter.com/{{ site.theme_settings.twitter }}" title="{{ site.theme_settings.str_follow_on }} Twitter">
+		<i class="fa fa-fw fa-twitter w3-text-yellow"></i>
+	</a>
+</div>
+{% endif %}
+
+{% if site.theme_settings.wordpress %}
+<div class="w3-bar-item">
+	<a href="https://{{ site.theme_settings.wordpress }}.wordpress.com/" title="{{ site.theme_settings.str_follow_on }} WordPress">
+		<i class="fa fa-fw fa-wordpress"></i>
+	</a>
+</div>
+{% endif %}
+
+{% if site.theme_settings.youtube %}
+<div class="w3-bar-item">
+	<a href="https://www.youtube.com/user/{{ site.theme_settings.youtube }}" title="{{ site.theme_settings.str_follow_on }} YouTube">
+		<i class="fa fa-fw fa-youtube"></i>
+	</a>
+</div>
+{% endif %}
