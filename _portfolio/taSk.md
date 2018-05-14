@@ -2,8 +2,10 @@
 layout: post
 title: taSk!
 thumbnail-path: ""
-#short-description: Build a self-destructing to-do list application.
-
+short-description: "·   Self-destructing to-do list Rails app that automatically deletes tasks older than 7 days.
+·   Incorporates AJAX to delete expired tasks and a custom Rake task to automate deletions.
+·   Implements Devise, Pundit, Bootstrap, Faker, Figaro, PostgreSQL, Send Grid, Factory Girls.
+"
 ---
 
 {:.center}

@@ -22,6 +22,7 @@
 .w3-hover-text-cyan:hover {color:rgb(0,207,250) !important}
 .w3-hover-border-cyan:hover {border-color:rgb(0,207,250) !important}
 .w3-hover-border-cyan-15:hover {border-color:rgb(239,252,255) !important}
+.w3-hover-border-cyan-d3:hover {border-color:rgb(0, 146, 175) !important}
 
 
 // Magenta__________________________________
@@ -94,5 +95,10 @@
 .w3-border-night {border-color:rgb(2,5,9) !important}
 
 .w3-hover-night:hover {color:rgb(255, 255, 255) !important; background-color:rgb(2,5,9) !important}
+.w3-hover-night-l5 {color:rgb(0, 0, 0) !important; background-color:rgb(230,239,250) !important}
 .w3-hover-text-night:hover {color:rgb(2,5,9) !important}
 .w3-hover-border-night:hover {border-color:rgb(2,5,9) !important}
+
+#projects-head {
+  padding-bottom:  0px !important;
+}

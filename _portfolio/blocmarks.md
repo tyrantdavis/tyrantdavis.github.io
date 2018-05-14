@@ -2,7 +2,8 @@
 layout: post
 title: OnYourMark
 thumbnail-path: ""
-#short-description: Build a bookmarking application that allows users to bookmark URLs via email, view other user’s bookmark and keep a personal list of bookmarks.
+short-description: "· Production quality SaaS based CRUD wiki application built on Rails.   · User authentication: Devise, authorization: Pundit, payments: Stripe"
+
 ---
 
 {:.center}

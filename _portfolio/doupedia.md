@@ -2,7 +2,7 @@
 layout: post
 title: DoUpedia
 thumbnail-path: ""
-#short-description: Blocipedia is a production quality SaaS based web application which allows users to create public and private Markdown based wikis and share them with other collaborators.
+short-description: "· Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet sagittis ante, sed fringilla elit.   · Nulla consectetur ligula at turpis blandit, et cursus dui posuere. Integer tellus tellus, pharetra malesuada sagittis nec, mollis eget neque. "
 
 ---
 
@@ -11,7 +11,7 @@ thumbnail-path: ""
 
 <h3 class="wide">Explanation</h3>
 
-Blocipedia is a CRUD application built using Ruby on Rails. This build uses some helpful gems including Stripe, Devise, Pundit, Redcarpet, and Faker.
+DoUpedia is a CRUD application built using Ruby on Rails. This build uses some helpful gems including Stripe, Devise, Pundit, Redcarpet, and Faker.
 
 <h3 class="wide">Problem</h3>
 
@@ -29,7 +29,7 @@ The aim for this project was to further my backend knowledge and skills of Ruby 
 <h3 class="wide">User Requirements</h3>
 
 1. Allow users to sign up for a free account by providing a user name, password and email
-2. Allow users to sign in and out of Blocipedia
+2. Allow users to sign in and out of DoUpedia
 3. Allow users with a standard account to create, read, update, and delete public wikis
 4. Provide three user roles: admin, standard, or premium
 5. Allow user to upgrade account from a free to a paid plan
@@ -49,7 +49,7 @@ $ cd new-rails-project
 
 I generated a Welcome controller and related views, using HTML and CSS from there. This gave users a landing page to welcome them to the app. I created an index view which indexed all blocmarks for all to see, including those just visiting the site. A creative and playful **call to action** was included to grab the users attention. It also guides the user to the unusually placed pagination just below.
 
-![Blocipedia Index](/img/index.png)
+![DoUpedia Index](/img/index.png)
 
 
 To sign users up for the app I added user authentication by incorporating Devise. I then created a Devise User model.
@@ -58,7 +58,7 @@ To sign users up for the app I added user authentication by incorporating Devise
 $ rails g devise user
 {% endhighlight %}
 
-![Blocipedia Signup](/img/signup.png)
+![DoUpedia Signup](/img/signup.png)
 
 
 _Sendgrid_ was integrated into the app which allowed the app to send confirmation emails. To securely configure Sendgrid username and password the _Figaro_ gem was used. I find myself using this gem quite a bit.  
@@ -67,13 +67,13 @@ _Sendgrid_ was integrated into the app which allowed the app to send confirmatio
 
 For sign-in sign-out capabilities I used the _Devise_ helper method `user_signed_in?` which determined if a user was signed in and rendered a particular view based on the response. The navigation links **Edit Profile** and **Sign Out** indicated a user was signed in. The user would see the **Sign-up** or **Sign In** navigation links if not signed in.   
 
-![Blocipedia Login](/img/login.png)
+![DoUpedia Login](/img/login.png)
 
 I generated a wiki model that references the user, plus a controller, and views for the resource. It enabled users to <span style="color: red">Create</span>, <span style="color: red">Read</span>, <span style="color: red">Update</span>, and <span style="color: red">Delete</span> public wikis.
 
 _Faker_ was used to seed the database.
 
-![Blocipedia Wiki](/img/entry.png)
+![DoUpedia Wiki](/img/entry.png)
 
 
 

@@ -3,7 +3,7 @@
 
 <h3 class="wide">Explanation</h3>
 
-<p>Blocipedia is a CRUD application built using Ruby on Rails. This build uses some helpful gems including Stripe, Devise, Pundit, Redcarpet, and Faker.</p>
+<p>DoUpedia is a CRUD application built using Ruby on Rails. This build uses some helpful gems including Stripe, Devise, Pundit, Redcarpet, and Faker.</p>
 
 <h3 class="wide">Problem</h3>
 
@@ -24,7 +24,7 @@
 
 <ol>
   <li>Allow users to sign up for a free account by providing a user name, password and email</li>
-  <li>Allow users to sign in and out of Blocipedia</li>
+  <li>Allow users to sign in and out of DoUpedia</li>
   <li>Allow users with a standard account to create, read, update, and delete public wikis</li>
   <li>Provide three user roles: admin, standard, or premium</li>
   <li>Allow user to upgrade account from a free to a paid plan</li>
@@ -42,13 +42,13 @@
 
 <p>I generated a Welcome controller and related views, using HTML and CSS from there. This gave users a landing page to welcome them to the app. I created an index view which indexed all blocmarks for all to see, including those just visiting the site. A creative and playful <strong>call to action</strong> was included to grab the users attention. It also guides the user to the unusually placed pagination just below.</p>
 
-<p><img src="/img/index.png" alt="Blocipedia Index" /></p>
+<p><img src="/img/index.png" alt="DoUpedia Index" /></p>
 
 <p>To sign users up for the app I added user authentication by incorporating Devise. I then created a Devise User model.</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">rails</span> <span class="n">g</span> <span class="n">devise</span> <span class="n">user</span></code></pre></figure>
 
-<p><img src="/img/signup.png" alt="Blocipedia Signup" /></p>
+<p><img src="/img/signup.png" alt="DoUpedia Signup" /></p>
 
 <p><em>Sendgrid</em> was integrated into the app which allowed the app to send confirmation emails. To securely configure Sendgrid username and password the <em>Figaro</em> gem was used. I find myself using this gem quite a bit.</p>
 
@@ -56,13 +56,13 @@
 
 <p>For sign-in sign-out capabilities I used the <em>Devise</em> helper method <code class="highlighter-rouge">user_signed_in?</code> which determined if a user was signed in and rendered a particular view based on the response. The navigation links <strong>Edit Profile</strong> and <strong>Sign Out</strong> indicated a user was signed in. The user would see the <strong>Sign-up</strong> or <strong>Sign In</strong> navigation links if not signed in.</p>
 
-<p><img src="/img/login.png" alt="Blocipedia Login" /></p>
+<p><img src="/img/login.png" alt="DoUpedia Login" /></p>
 
 <p>I generated a wiki model that references the user, plus a controller, and views for the resource. It enabled users to <span style="color: red">Create</span>, <span style="color: red">Read</span>, <span style="color: red">Update</span>, and <span style="color: red">Delete</span> public wikis.</p>
 
 <p><em>Faker</em> was used to seed the database.</p>
 
-<p><img src="/img/entry.png" alt="Blocipedia Wiki" /></p>
+<p><img src="/img/entry.png" alt="DoUpedia Wiki" /></p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">rails</span> <span class="n">g</span> <span class="n">model</span> <span class="no">Wiki</span> <span class="n">title</span><span class="ss">:string</span> <span class="n">body</span><span class="ss">:text</span> <span class="kp">private</span><span class="ss">:boolean</span> <span class="n">user</span><span class="ss">:references:index</span></code></pre></figure>
 
@@ -124,7 +124,7 @@
 
 <h3 class="wide">Explanation</h3>
 
-<p>Blocipedia is a CRUD application built using Ruby on Rails. This build uses some helpful gems including Stripe, Devise, Pundit, Redcarpet, and Faker.</p>
+<p>DoUpedia is a CRUD application built using Ruby on Rails. This build uses some helpful gems including Stripe, Devise, Pundit, Redcarpet, and Faker.</p>
 
 <h3 class="wide">Problem</h3>
 
@@ -145,7 +145,7 @@
 
 <ol>
   <li>Allow users to sign up for a free account by providing a user name, password and email</li>
-  <li>Allow users to sign in and out of Blocipedia</li>
+  <li>Allow users to sign in and out of DoUpedia</li>
   <li>Allow users with a standard account to create, read, update, and delete public wikis</li>
   <li>Provide three user roles: admin, standard, or premium</li>
   <li>Allow user to upgrade account from a free to a paid plan</li>
@@ -163,13 +163,13 @@
 
 <p>I generated a Welcome controller and related views, using HTML and CSS from there. This gave users a landing page to welcome them to the app. I created an index view which indexed all blocmarks for all to see, including those just visiting the site. A creative and playful <strong>call to action</strong> was included to grab the users attention. It also guides the user to the unusually placed pagination just below.</p>
 
-<p><img src="/img/index.png" alt="Blocipedia Index" /></p>
+<p><img src="/img/index.png" alt="DoUpedia Index" /></p>
 
 <p>To sign users up for the app I added user authentication by incorporating Devise. I then created a Devise User model.</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">rails</span> <span class="n">g</span> <span class="n">devise</span> <span class="n">user</span></code></pre></figure>
 
-<p><img src="/img/signup.png" alt="Blocipedia Signup" /></p>
+<p><img src="/img/signup.png" alt="DoUpedia Signup" /></p>
 
 <p><em>Sendgrid</em> was integrated into the app which allowed the app to send confirmation emails. To securely configure Sendgrid username and password the <em>Figaro</em> gem was used. I find myself using this gem quite a bit.</p>
 
@@ -177,13 +177,13 @@
 
 <p>For sign-in sign-out capabilities I used the <em>Devise</em> helper method <code class="highlighter-rouge">user_signed_in?</code> which determined if a user was signed in and rendered a particular view based on the response. The navigation links <strong>Edit Profile</strong> and <strong>Sign Out</strong> indicated a user was signed in. The user would see the <strong>Sign-up</strong> or <strong>Sign In</strong> navigation links if not signed in.</p>
 
-<p><img src="/img/login.png" alt="Blocipedia Login" /></p>
+<p><img src="/img/login.png" alt="DoUpedia Login" /></p>
 
 <p>I generated a wiki model that references the user, plus a controller, and views for the resource. It enabled users to <span style="color: red">Create</span>, <span style="color: red">Read</span>, <span style="color: red">Update</span>, and <span style="color: red">Delete</span> public wikis.</p>
 
 <p><em>Faker</em> was used to seed the database.</p>
 
-<p><img src="/img/entry.png" alt="Blocipedia Wiki" /></p>
+<p><img src="/img/entry.png" alt="DoUpedia Wiki" /></p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">rails</span> <span class="n">g</span> <span class="n">model</span> <span class="no">Wiki</span> <span class="n">title</span><span class="ss">:string</span> <span class="n">body</span><span class="ss">:text</span> <span class="kp">private</span><span class="ss">:boolean</span> <span class="n">user</span><span class="ss">:references:index</span></code></pre></figure>
 
