@@ -28,7 +28,7 @@ Where there is a pattern there is a set of instructions for repeating a desired 
 
 <h5 class="center wide">Same model. Different scale!</h5>
 
-<span class="center">![Solar System](/img/post_images/Solar-system.jpeg)</span>
+<span class="center" >![Solar System](/img/post_images/Solar-system.jpeg)</span>
 
 <b class="wide"><span class="special-text">F</span></b>ast forward a few years, I am working as a Health Information Technology manager. I was tasked with taking over a failing program. Once I had the program running smoothly and excelling, I became anxious and began looking for my next challenge. This was a consequence of me constantly needing a challenge to feel alive.   Many of you are probably wondering why I would transition from a managerial role into software development. Well, that position is actually were my journey into software development as a profession began.
 
