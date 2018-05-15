@@ -16,12 +16,12 @@ title: home
 
     <div class="w3-padding-64">
 
-     <a href="#" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar
-     w3-topbar w3-bottombar w3-border-white w3-hover-border-white w3-padding-16">Home</a>   <!-- w3-border-0 w3-hover-border-white -->
+<!--     <a href="#" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar
+     w3-topbar w3-bottombar w3-border-white w3-hover-border-white w3-padding-16">Home</a>  --> <!-- w3-border-0 w3-hover-border-white -->
+
+     <a href="#work" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar  w3-hover-border-yellow  w3-padding-16">Skills and Projects</a>
 
       <a href="#work" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar w3-border-white w3-hover-border-cyan  w3-padding-16">Resume</a>
-
-      <a href="#work" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar  w3-hover-border-yellow  w3-padding-16">Skills and Projects</a>
 
       <a href="#contact" class=" w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar w3-border-white w3-hover-border-red  w3-padding-16">Posts</a>
 
@@ -245,8 +245,9 @@ title: home
           <br />
         </div>
       </div>
-      <form class="w3-container w3-card w3-padding-32 w3-black" action="https://getsimpleform.com/messages?form_api_token=fe0494b3f6727a6047675242916e447 " target="_blank">
-
+      <form class="w3-container w3-card w3-padding-32 w3-black" action="https://getsimpleform.com/messages?form_api_token=fe0494b3f6727a6047675242916e447 " method="post">
+        <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+        <input type='hidden' name='redirect_to' value='https://tyrantdavis.me' />
         <div class="w3-section  w3-text-white">
 
           <label class="w3-wide">Name</label>
