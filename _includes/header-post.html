@@ -1,6 +1,6 @@
-<header class="site-header">
+<header class="site-header w3-center">
   <nav class="site-nav">
-    <ul>
+    <ul class="w3-ul">
       {% for page in site.pages %}
       {% if page.title and page.hide != true %}
       <li>
@@ -20,7 +20,7 @@
       <a href="{{ site.baseurl }}/">{{ site.theme_settings.title }}</a>
     </h1>
     <div class="divider"></div>
-    <h1 class="title">{{ page.title }}</h1> <!-- Post and Portfolio Big titles beneath Tyrant Davis i.e. Challenge Accepted! -->
+    <h1 class="title w3-center">{{ page.title }}</h1> <!-- Post and Portfolio Big titles beneath Tyrant Davis i.e. Challenge Accepted! -->
   </div>
   {% endif %}
 </header>
