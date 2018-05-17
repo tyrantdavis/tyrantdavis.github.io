@@ -91,10 +91,11 @@
       @media (max-width: 768px) {
         width:99%;
       }
-      img {
+      img {//not affecting any of my images
         display:block;
         text-align: center;
         margin:0 auto 1%;
+
       }
     }
     .project-description {
