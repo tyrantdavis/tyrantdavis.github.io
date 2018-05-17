@@ -14,10 +14,14 @@ theme_settings:
      <h1>Fun & Creative Software Developer</h1>
      <p>I build applications for business and life solutions.</p>
   header_text_feature_image:
+  author: >
+    Created By:<b class="w3-text-night">Tyrant Davis </b>
   footer_text: >
     Brought To You By: <b class="w3-text-night">The Night Life</b>
   footer_text_too: >
     Powered by <a href="http://jekyllrb.com">Jekyll</a>.
+  copy: >
+    <i class="fa fa-copyright" aria-hidden="true"></i>
 # Icons
   rss: false
   email_address: "hello.@tyrantdavis.me"
