@@ -2,7 +2,7 @@
 layout: posts-header
 ---
 <article class="w3-container"{% if page.feature-img %}class="feature-image"{% endif %}>
-  <section class="post-conten w3-center">{{ content }}</section>
+  <section class="post-content w3-center">{{ content }}</section>
 </article>
 
 <!-- Disqus -->
@@ -11,11 +11,3 @@ layout: posts-header
   {% include disqus.html %}
 </div>
 {% endif %}
-<!-- {{ content }}
- <ul class="myposts">
- {% for post in site.posts %}
-     <li><a href="{{ post.url }}">{{ post.title}}</a>
-     <span class="postDate">{{ post.date | date: "%b %-d, %Y" }}</span>
-     </li>
- {% endfor %}
- </ul> -->
