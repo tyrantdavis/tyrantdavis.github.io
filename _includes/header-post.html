@@ -5,7 +5,7 @@
       {% if page.title and page.hide != true %}
       <li>
         <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">
-          {{ page.title }} <!-- Renders About and Say Hello links on post and portfolio pages plu about & say hello pages-->
+          <!-- {{ page.title }} <!-- Renders About and Say Hello links on post and portfolio pages plu about & say hello pages--> 
         </a>
       </li>
       {% endif %}
@@ -20,7 +20,7 @@
       <a href="{{ site.baseurl }}/">{{ site.theme_settings.title }}</a>
     </h1>
     <div class="divider"></div>
-	  <ul>
+	  <ul class="w3-ul">
 	    {% include icons.html %}
 		</ul>
     <h1 class="title w3-center">{{ page.title }}</h1> <!-- Post and Portfolio Big titles beneath Tyrant Davis i.e. Challenge Accepted! -->
