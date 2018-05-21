@@ -164,7 +164,7 @@ title: home
 
 <div class="w3-row posts" id="contact">
 
-  <div class="w3-half w3-magenta w3-text-white w3-container w3-center" style="height:700px">
+  <div class="w3-half w3-magenta w3-text-white w3-container w3-center" style="max-height:800px">
 
     <div class="w3-padding-64">
 
@@ -200,12 +200,28 @@ title: home
       <i class="fa fa-chevron-left"></i>
       {{ site.theme_settings.str_prev }}
     </a>
+    {% else %}
+      <span class="previous">Previous</span>
     {% endif %}
+
+    <!-- <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span> -->
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <em>{{ page }}</em>
+      {% elsif page == 1 %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+      {% else %}
+        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+      {% endif %}
+    {% endfor %}
+
     {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
       {{ site.theme_settings.str_next }}
       <i class="fa fa-chevron-right"></i>
     </a>
+    {% else %}
+      <span class="next ">Next</span>
     {% endif %}
   </div>
   {% endif %}

@@ -46,7 +46,7 @@
 .posts {
   @extend %padding-header;
   .post-header {
-    text-align: center;
+    text-align:left;
   }
   .post-teaser {
     width: 46%;
@@ -134,6 +134,6 @@
   padding: $padding-small $padding-large 0 $padding-large;
   text-align: center;
 }
-.center {
-  text-align: center;
-}
+// .center {
+//   text-align: center;
+// }

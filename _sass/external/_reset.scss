@@ -181,12 +181,12 @@
 //  * Remove border when inside `a` element in IE 8/9/10.
 //  */
 //
-// img {
-//   border: 0;
-//   //width: 94%; // affects my images. but makes the Figaro image much bigger as well.
-//   //alo affects post images
-//   max-width: 600px;
-// }
+img {
+  border: 0;
+  //width: 94%; // affects my images. but makes the Figaro image much bigger as well.
+  //alo affects post images
+  max-width: 600px;
+}
 //
 // /**
 //  * Correct overflow not hidden in IE 9/10/11.

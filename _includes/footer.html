@@ -1,9 +1,19 @@
 {% if site.theme_settings.footer_text || if site.theme_settings.footer_text_too %}
-<footer class="w3-container w3-padding-16 w3-cyan">
-  <p class="w3-center w3-text-yellow w3-wide">{{ site.theme_settings.author }}
-    <span class="w3-text-night">{{ site.theme_settings.copy }}</span>
-  </p>
-  <p class="w3-center w3-text-yellow w3-wide">{{ site.theme_settings.footer_text }}</p>
-  <p class="w3-center w3-text-yellow">{{ site.theme_settings.footer_text_too }}</p>
-</footer>
+  {% if page.layout != "project" %}
+    <footer class="w3-container w3-padding-16 w3-cyan w3-text-tiny">
+      <p class="w3-center w3-text-yellow w3-wide">{{ site.theme_settings.author }}
+        <span class="w3-text-night">{{ site.theme_settings.copy }}</span>
+      </p>
+      <p class="w3-center w3-text-yellow w3-wide">{{ site.theme_settings.footer_text }}</p>
+      <p class="w3-center w3-text-yellow">{{ site.theme_settings.footer_text_too }}</p>
+    </footer>
+  {% else %}
+    <footer class="w3-container w3-padding-16 w3-white">
+      <p class="w3-center w3-text-yellow w3-wide">{{ site.theme_settings.author }}
+        <span class="w3-text-night">{{ site.theme_settings.copy }}</span>
+      </p>
+      <p class="w3-center w3-text-yellow w3-wide">{{ site.theme_settings.footer_text }}</p>
+      <p class="w3-center w3-text-yellow">{{ site.theme_settings.footer_text_too }}</p>
+    </footer>
+  {% endif %}
 {% endif %}
