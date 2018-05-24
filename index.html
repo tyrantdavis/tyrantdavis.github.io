@@ -10,7 +10,8 @@ title: home
 
     <div class="w3-padding-64">
 
-      <h1>My Logo</h1>
+      <h1><img src="/assets/SVG/TDLogoForWeb.svg" /></h1>
+
 
     </div>
 
@@ -19,13 +20,13 @@ title: home
 <!--     <a href="#" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar
      w3-topbar w3-bottombar w3-border-white w3-hover-border-white w3-padding-16">Home</a>  --> <!-- w3-border-0 w3-hover-border-white -->
 
-     <a href="#work" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar  w3-hover-border-yellow  w3-padding-16">Skills & Projects</a>
+     <a href="#work" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar  w3-hover-border-yellow  w3-padding-16 w3-large">Skills & Projects</a>
 
-      <a href="#work" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar w3-border-white w3-hover-border-cyan  w3-padding-16">Resume</a>
+      <a href="#work" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar w3-border-white w3-hover-border-cyan  w3-padding-16 w3-large">Resume</a>
 
-      <a href="#contact" class=" w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar w3-border-white w3-hover-border-red  w3-padding-16">Posts</a>
+      <a href="#contact" class=" w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar w3-border-white w3-hover-border-red  w3-padding-16 w3-large">Posts</a>
 
-      <a href="#contact" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar w3-border-white w3-hover-border-white  w3-padding-16">Contact</a>
+      <a href="#contact" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar w3-border-white w3-hover-border-white  w3-padding-16 w3-large">Contact</a>
 
     </div>
 
@@ -39,11 +40,11 @@ title: home
     <br/>
       <div class="w3-container w3-center-align w3-padding-large">
         <p>Hi!</p>
-        <p>I am passionate about the Internet of Things and creatively developing computer applications for business and life solutions.</p>
+        <p class="w3-justify">I am passionate about the Internet of Things and creatively developing computer applications for business and life solutions.</p>
       </div>
       <br/>
       <!-- Social icons  -->
-      <div class="w3-container w3-bar-block w3-center">
+      <div class="w3-container w3-bar-block w3-center w3-padding-special">
         {% include icons.html %}
       </div>
     </div>
@@ -62,9 +63,10 @@ title: home
 
       <h2 class="work w3-wide">Skills</h2>
 
-     <span><b>Strong</b> Skills: <b>Ruby, Rails, Javascript, Git & Github, HTML, CSS</b> , Angular, JQuery, React, Node.JS, W3.CSS, Bootstrap, SASS, RSpec, TDD, RDBMS Desgin, RESTful API Design, Engineering Principles, Affinity Designer
-    </span>
-      <div class="w3-padding"><b>Future Skills:</b> Python, Typescript, ReactVR, Machine Learning</div>
+     <div class="w3-justify"><b>Strong</b> Skills: <b>Ruby, Rails, Javascript, Git & Github, HTML, CSS</b> , Angular, JQuery, React, Node.JS, W3.CSS, Bootstrap, SASS, RSpec, TDD, RDBMS Desgin, RESTful API Design, Engineering Principles, Affinity Designer
+    </div>
+    <br />
+      <div class=" w3-justify"><b>Future Skills:</b> Python, Typescript, ReactVR, Machine Learning</div>
 
     </div>
     <h2  id="projects-head" class="w3-wide w3-text-night-light w3-white w3-opacity">Projects</h2>
@@ -77,7 +79,7 @@ title: home
       </div>
       <div class="project-description">
         <a href="{{ project.url | prepend: site.baseurl }}"><strong class="w3-wide">{{ project.title }}</strong></a>
-        <p>{{ project.short-description}}</p>
+        <p class="w3-justify">{{ project.short-description}}</p>
         <p class="meta">
   {{ post.date | date: "%B %-d, %Y" }}
 </p>
@@ -138,16 +140,16 @@ title: home
         <br />
         <div class="w3-container w3-padding" >
           <div class="w3-wide w3-padding-large"><b>Education</b></div>
-          <p><b>University of South Florida</b> – Political Science | Cum Laude</p>
-          <p><b>Bloc.io</b> - Software Architecture Immersive - 2016 - Present</p>
+          <p class="w3-justify"><b>&bull; University of South Florida</b> – Political Science | Cum Laude</p>
+          <p class="w3-justify"><b>&bull; Bloc.io</b> - Software Architecture Immersive - 2016 - Present</p>
           <br/>
           <div class="w3-wide w3-padding-large"><b>Professional Development</b></div>
-          <p>Project Management Certificate UW Madison  &bull;  Doing Business with U.S. Public
+          <p class="w3-justify">&bull; Project Management Certificate UW Madison  &bull;  Doing Business with U.S. Public
             Sector Customers  &bull;  HIPAA  &bull;  Client Relations  &bull;  Quality Assurance  &bull;  Business of
             Healthcare Payers  &bull;  Inside Healthcare Payers & Plans  &bull;  Inside Healthcare Providers  &bull;
             SAP Administrator</p>
           <div class="w3-wide w3-padding-large"><b>Personal</b></div>
-          <p>Music Production	 &bull;  Strength Training	 &bull;  Snorkeling	 &bull;  Travel</p>
+          <p class="w3-justify">&bull; Music Production	 &bull;  Strength Training	 &bull;  Snorkeling	 &bull;  Travel</p>
         </div>
       </div>
 
@@ -163,7 +165,7 @@ title: home
 
 <div class="w3-row posts" id="contact">
 
-  <div class="w3-half w3-magenta w3-text-white w3-container w3-center" style="max-height:800px">
+  <div class="w3-half w3-magenta w3-text-white w3-container w3-center" style="height:700px">
 
     <div class="w3-padding-64">
 
@@ -234,8 +236,9 @@ title: home
       <div class="w3-row">
         <!-- Social icons from Font Awesome, if enabled -->
         <div class="w3-third w3-mobile">
-          <span id="holla" class="w3-opacity-max w3-wide">holla @ <span class="w3-text-red">.</span><span class="w3-text-cyan">me</span>!</span>
+          <!-- <span id="holla" class="w3-opacity-max w3-wide">holla @ <span class="w3-text-red">.</span><span class="w3-text-cyan">me</span>!</span> -->
           <!-- <i class="w3-large w3-magenta">{% include short-list-icons.html %}</i> -->
+          <span class="w3-opacity-mi"><img src="/assets/SVG/just-holla@me.svg"/></span>
           <br />
         </div>
       </div>
