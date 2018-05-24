@@ -2,10 +2,10 @@
 layout: project
 title: OnYourMark
 thumbnail-path: ""
-short-description: "&bull; Production quality SaaS based CRUD wiki application &bull; Built on Rails.   &bull; User  authentication: Devise &bull; authorization: Pundit &bull; email: Mailgun"
+short-description: "&bull; Bookmarking application that allows users to bookmark URLs via email, view other user’s bookmark and keep a personal list of bookmarks &bull; Built on Rails.   &bull; User  authentication: Devise &bull; authorization: Pundit &bull; email: Mailgun &bull; database: PostgreSQL"
 
 ---
-
+<p>&bull; Production quality SaaS based CRUD wiki application &bull; Built on Rails.   &bull; User  authentication: Devise &bull; authorization: Pundit &bull; email: Mailgun</p>
 
 <!-- ![]({{ site.baseurl }}/img/blocMarks/onyourmark.png) -->
 <p align="center">
