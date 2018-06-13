@@ -1,6 +1,6 @@
 ---
 layout: project
-title: DoUpedia
+title: doUpedia
 thumbnail-path: ""
 short-description: "&bull; DoUpedia is a production quality SaaS web application which allows users to create public and private Markdown based wikis and share them with other collaborators. &bull; Built on Rails &bull; Incorporates  Stripe, Devise, Redcarpet, Pundit, Sendgrid, Figaro, and Faker"
 
@@ -8,11 +8,11 @@ short-description: "&bull; DoUpedia is a production quality SaaS web application
 
 
 <p align="center">
-  <img  src="/assets/images/home.png" alt="home">
+  <img  src="/assets/images/doUpediaHome.png" alt="home">
 </p>
 
 <h3 class="wide w3-center">Summary</h3>
-**DoUpedia** is a production quality _SaaS_ web application which allows users to create public and private Markdown based wikis and share them with other collaborators.
+**doUpedia** is a production quality _SaaS_ web application which allows users to create public and private Markdown based wikis and share them with other collaborators.
 
 <h3 class="wide w3-center">Explanation</h3>
 
@@ -54,7 +54,7 @@ $ cd new-rails-project
 {% endhighlight %}
 </center>
 
-I generated a Welcome controller and related views, using HTML and CSS from there. This gave users a landing page to welcome them to the app. I created an index view which indexed all blocmarks for all to see, including those just visiting the site. A creative and playful **call to action** was included to grab the users attention. It also guides the user to the unusually placed pagination just below.
+I generated a Welcome controller and related views, using HTML and CSS from there. This gave users a landing page to welcome them to the app. I created an index view which indexed all wikis for all to see, including those just visiting the site. A creative and playful **call to action** was included to grab the users attention. It also guides the user to the unusually placed pagination just below.
 
 
 <p align="center">
