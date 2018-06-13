@@ -5,7 +5,6 @@ thumbnail-path: ""
 short-description: "&bull; Bookmarking application that allows users to bookmark URLs via email, view other user’s bookmark and keep a personal list of bookmarks &bull; Built on Rails.   &bull; User  authentication: Devise &bull; authorization: Pundit &bull; email: Mailgun &bull; database: PostgreSQL"
 
 ---
-<!-- ![]({{ site.baseurl }}/img/onyourmark/onyourmark.png) -->
 <p align="center">
   <img  src="/assets/images/onyourmark/onyourmark.png" alt="home">
 </p>
@@ -51,7 +50,6 @@ This allowed users to sign up for the application and send emails for confirmati
 
 I used the _Devise_ helper method `user_signed_in?` for sign-in sign-out capabilities.  This determined if a user was signed in and rendered a particular view based on a _boolean_ response. The navigation links <span class="w3-text-cyan">Edit Profile</span> and <span class="w3-text-cyan">Sign Out</span> indicated a user was signed in.
 
-<!-- ![Edit Profile](/img/onyourmark/editUser.png){: .align-center} -->
 <p align="center">
   <img  src="/assets/images/onyourmark/editUser.png" alt="user profile">
 </p>
@@ -119,7 +117,6 @@ I generated a **Topics** controller with **#index**, **#show**, **#new**, **#edi
 
 <center class="highlight">$ rails g controller Topics index show new edit</center>
 
-<!-- ![New Topic](/img/onyourmark/newTopic.png) -->
 <p align="center">
   <img  src="/assets/images/onyourmark/newTopic.png" alt="new topic">
 </p>
