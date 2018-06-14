@@ -1,18 +1,4 @@
 <header class="site-header w3-center">
-  <!-- <nav class="site-nav">
-    <ul class="w3-ul">
-      {% for page in site.pages %}
-      {% if page.title and page.hide != true %}
-      <li>
-        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">
-          {{ page.title }}  Renders About and Say Hello links on post and portfolio pages plu about & say hello pages
-        </a>
-      </li>
-      {% endif %}
-      {% endfor %}
-    </ul>
-  </nav> -->
-
   {% if site.theme_settings.header_text %}
   <div class="call-out"
   style="background-image: url('{{ site.baseurl }}/{{ site.theme_settings.header_text_feature_image }}')">
@@ -23,7 +9,7 @@
 	  <ul class="w3-ul">
 	    {% include icons.html %}
 		</ul>
-    <h1 class="title w3-center">{{ page.title }}</h1> <!-- Post and Portfolio Big titles beneath Tyrant Davis i.e. Challenge Accepted! -->
+    <h1 class="title w3-center">{{ page.title }}</h1> 
   </div>
   {% endif %}
 </header>
