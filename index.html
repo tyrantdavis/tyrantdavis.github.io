@@ -4,47 +4,47 @@ title: home
 ---
 <!-- First Grid: Logo & About -->
 
-<div class="w3-row w3-wide">
+<div class="w3-row w3-wide w3-mobile">
 
-  <div class="w3-half w3-night w3-container w3-center" style="height:700px">
+  <div class="w3-half w3-night w3-container w3-center w3-mobile" style="height:700px">
 
-    <div class="w3-padding-64">
+    <div class="w3-padding-64 w3-mobile">
 
-      <h1><img src="/assets/SVG/TDLogoForWeb.svg" /></h1>
+      <img src="/assets/SVG/logo.svg" />
 
 
     </div>
 
-    <div class="w3-padding-64">
+    <div class="w3-padding-64 w3-mobile">
 
 <!--     <a href="#" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar
      w3-topbar w3-bottombar w3-border-white w3-hover-border-white w3-padding-16">Home</a>  --> <!-- w3-border-0 w3-hover-border-white -->
 
-     <a href="#work" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar  w3-hover-border-yellow  w3-padding-16 w3-large">Skills & Projects</a>
+     <a href="#work" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar  w3-hover-border-yellow  w3-padding-16 w3-mobile">Skills & Projects</a>
 
-      <a href="#work" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar w3-border-white w3-hover-border-cyan  w3-padding-16 w3-large">Resume</a>
+      <a href="#work" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar w3-border-white w3-hover-border-cyan  w3-padding-16 w3-mobile">Resume</a>
 
-      <a href="#contact" class=" w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar w3-border-white w3-hover-border-red  w3-padding-16 w3-large">Posts</a>
+      <a href="#contact" class=" w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar w3-border-white w3-hover-border-red  w3-padding-16 w3-mobile">Posts</a>
 
-      <a href="#contact" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar w3-border-white w3-hover-border-white  w3-padding-16 w3-large">Contact</a>
+      <a href="#contact" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar w3-border-white w3-hover-border-white  w3-padding-16 w3-mobile">Contact</a>
 
     </div>
 
   </div>
 
-  <div class="w3-half  w3-magenta w3-container w3-center w3-display-container" style="height:700px">
+  <div class="w3-half  w3-magenta w3-container w3-center w3-display-container w3-mobile" style="height:700px">
 
-    <div class="w3-padding-64 w3-center">
+    <div class="w3-padding-64 w3-center w3-mobile">
 
-      <h1 class="w3-container w3-margin-bottom">About Me</h1>
+      <h1 class="w3-container w3-margin-bottom w3-mobile">About Me</h1>
     <br/>
-      <div class="w3-container w3-center-align w3-padding-large">
+      <div class="w3-container w3-center-align w3-padding-large w3-mobile">
         <p>Hi!</p>
         <p class="w3-justify">I am passionate about the Internet of Things and creatively developing computer applications for business and life solutions.</p>
       </div>
       <br/>
       <!-- Social icons  -->
-      <div class="w3-container w3-bar-block w3-center w3-padding-special">
+      <div class="w3-container w3-bar-block w3-center w3-padding-special w3-mobile">
         {% include icons.html %}
       </div>
     </div>
@@ -55,30 +55,30 @@ title: home
 
 <!-- Second Grid: Work & Resume -->
 
-<div class="w3-row">
+<div class="w3-row w3-mobile">
 
-  <div class="w3-half w3-yellow w3-center w3-container home" style="height:800px" id="work">
+  <div class="w3-half w3-yellow w3-center w3-container home w3-mobile" style="height:800px" id="work">
 
-    <div class="w3-padding-64">
+    <div class="w3-padding-64 w3-mobile">
 
-      <h2 class="work w3-wide">Skills</h2>
+      <h2 class="work w3-wide w3-mobile">Skills</h2>
 
-     <div class="w3-justify"><b>Strong</b> Skills: <b>Ruby, Rails, Javascript, Git & Github, HTML, CSS</b> , Angular, JQuery, React, Node.JS, W3.CSS, Bootstrap, SASS, RSpec, TDD, RDBMS Desgin, RESTful API Design, Engineering Principles, Affinity Designer
+     <div class="w3-justify w3-mobile"><b>Strong</b> Skills: <b>Ruby, Rails, Javascript, Git & Github, HTML, CSS</b> , Angular, JQuery, React, Node.JS, W3.CSS, Bootstrap, SASS, RSpec, TDD, RDBMS Desgin, RESTful API Design, Engineering Principles, Affinity Designer
     </div>
     <br />
-      <div class=" w3-justify"><b>Future Skills:</b> Python, Typescript, ReactVR, Machine Learning</div>
+      <div class=" w3-justify w3-mobile"><b>Future Skills:</b> Python, Typescript, ReactVR, Machine Learning</div>
 
     </div>
-    <h2  id="projects-head" class="w3-wide w3-text-night-light w3-white w3-opacity">Projects</h2>
+    <h2  id="projects-head" class="w3-wide w3-text-night-light w3-white w3-opacity w3-mobile">A Few Projects</h2>
     {% for project in site.portfolio limit:4 %}
-    <div class="w3-row project w3-hover-shadow w3-hover-white w3-hover-panel w3-round w3-hover-opacity" style="height:141px">
-      <div class="w3-yellow project-thumb w3-hide">
+    <div class="w3-row project w3-hover-shadow w3-hover-white w3-hover-panel w3-round w3-hover-opacity w3-mobile" style="height:141px">
+      <div class="w3-yellow project-thumb w3-hide w3-mobile">
         <a href="{{ project.url | prepend: site.baseurl }}">
           <img src="{{ project.thumbnail-path }}" alt="{{ project.title }}" style="width:100%; height:140px"/>
         </a>
       </div>
-      <div class="project-description">
-        <a href="{{ project.url | prepend: site.baseurl }}"><strong class="w3-wide">{{ project.title }}</strong></a>
+      <div class="project-description w3-mobile">
+        <a href="{{ project.url | prepend: site.baseurl }}"><strong class="w3-wide w3-mobile">{{ project.title }}</strong></a>
         <p class="w3-justify">{{ project.short-description}}</p>
         <p class="meta">
   {{ post.date | date: "%B %-d, %Y" }}
@@ -88,102 +88,100 @@ title: home
     {% endfor %}
   </div>
 
-  <div class="w3-half w3-cyan w3-container" style="height:800px">
+  <div class="w3-half w3-cyan w3-container w3-mobile" style="height:800px">
 
-    <div class="w3-padding-64 w3-center w3-text-night">
+    <div class="w3-padding-64 w3-center w3-text-night w3-mobile">
 
-      <h2 class="w3-wide">Resume</h2>
+      <h2 class="w3-wide w3-mobile">Resume</h2>
 
-      <div class="w3-container w3-responsive">
+      <div class="w3-container w3-responsive w3-mobile">
 
-        <table class="w3-table">
+        <table class="w3-table w3-mobile">
 
-          <tr>
+          <tr class="w3-mobile">
 
-            <th>Year</th>
+            <th class="w3-mobile">Year</th>
 
-            <th>Title</th>
+            <th class="w3-mobile">Title</th>
 
-            <th>Company</th>
-
-          </tr>
-
-          <tr class="w3-white">
-
-            <td>2016-Present</td>
-
-            <td>Operations Manager</td>
-
-            <td>Gadget RM</td>
+            <th class="w3-mobile">Company</th>
 
           </tr>
 
-          <tr>
+          <tr class="w3-white w3-mobile">
 
-            <td>2012-2015</td>
+            <td class="w3-mobile">2016-Present</td>
 
-            <td>Health / Insurance Manager</td>
+            <td class="w3-mobile">Business Operations Manager</td>
 
-            <td>Hewlett-Packard</td>
+            <td class="w3-mobile">Gadget RM</td>
 
           </tr>
 
-          <tr class="w3-white">
+          <tr class="w3-mobile">
 
-            <td>2010-2012</td>
+            <td class="w3-mobile">2012-2015</td>
 
-            <td>Client Solutions Center Manager</td>
+            <td class="w3-mobile">Health / Insurance Manager</td>
 
-            <td>Hewlett-Packard</td>
+            <td class="w3-mobile">Hewlett-Packard</td>
+
+          </tr>
+
+          <tr class="w3-white w3-mobile">
+
+            <td class="w3-mobile">2010-2012</td>
+
+            <td class="w3-mobile">Client Solutions Center Manager</td>
+
+            <td class="w3-mobile">Hewlett-Packard</td>
           </tr>
         </table>
         <br />
-        <div class="w3-container w3-padding" >
-          <div class="w3-wide w3-padding-large"><b>Education</b></div>
-          <p class="w3-justify"><b>&bull; University of South Florida</b> – Political Science | Cum Laude</p>
-          <p class="w3-justify"><b>&bull; Bloc.io</b> - Software Architecture Immersive - 2016 - Present</p>
+
+        <!-- Third Grid: Education & Prof. Development -->
+        <div class="w3-container w3-padding w3-mobile" >
+          <div class="w3-wide w3-padding-large w3-mobile"><b>Education</b></div>
+          <p class="w3-justify w3-mobile"><b>&bull; University of South Florida</b> – Political Science | Cum Laude</p>
+          <p class="w3-justify w3-mobile"><b>&bull; Bloc.io</b> - Software Architecture Immersive - 2016 - Present</p>
           <br/>
-          <div class="w3-wide w3-padding-large"><b>Professional Development</b></div>
-          <p class="w3-justify">&bull; Project Management Certificate UW Madison  &bull;  Doing Business with U.S. Public
+          <div class="w3-wide w3-padding-large w3-mobile"><b>Professional Development</b></div>
+          <p class="w3-justify w3-mobile">&bull; Project Management Certificate UW Madison  &bull;  Doing Business with U.S. Public
             Sector Customers  &bull;  HIPAA  &bull;  Client Relations  &bull;  Quality Assurance  &bull;  Business of
             Healthcare Payers  &bull;  Inside Healthcare Payers & Plans  &bull;  Inside Healthcare Providers  &bull;
             SAP Administrator</p>
-          <div class="w3-wide w3-padding-large"><b>Personal</b></div>
+          <div class="w3-wide w3-padding-large w3-mobile"><b>Personal</b></div>
           <p class="w3-justify">&bull; Music Production	 &bull;  Strength Training	 &bull;  Snorkeling	 &bull;  Travel</p>
         </div>
       </div>
 
     </div>
-
+<!-- Contact -->
   </div>
 
 </div>
 
+<div class="w3-row posts  w3-mobile" id="contact">
 
+  <div class="w3-half w3-magenta w3-text-white w3-container w3-center w3-mobile" style="height:700px">
 
-<!-- Third Grid: Education & Prof. Development -->
+    <div class="w3-padding-64 w3-mobile">
 
-<div class="w3-row posts" id="contact">
-
-  <div class="w3-half w3-magenta w3-text-white w3-container w3-center" style="height:700px">
-
-    <div class="w3-padding-64">
-
-      <h1 class="w3-wide post-header w3-text-white w3-opacity-min">My Posts</h1>
+      <h1 class="w3-wide post-header w3-text-white w3-opacity-min w3-mobile">My Posts</h1>
       <ul class="w3-ul">
             {% for post in paginator.posts %}
-            <li class="post-teaser w3-round-small w3-leftbar w3-rightbar w3-hover-shadow w3-block w3-border-magenta w3-hover-border-white no-border-bottom w3-padding-16" style="border-bottom: 0px">
+            <li class="post-teaser w3-round-small w3-leftbar w3-rightbar w3-hover-shadow w3-block w3-border-magenta w3-hover-border-white no-border-bottom w3-padding-16 w3-mobile" style="border-bottom: 0px">
               <header>
                 <h3>
-                  <a class="w3-wide post-link" href="{{ post.url | prepend: site.baseurl }}">
+                  <a class="w3-wide post-link w3-mobile" href="{{ post.url | prepend: site.baseurl }}">
                     {{ post.title }}
                   </a>
                 </h3>
-                <p class="meta">
+                <p class="meta w3-mobile">
                   {{ post.date | date: "%B %-d, %Y" }}
                 </p>
               </header>
-              <div class="excerpt">
+              <div class="excerpt w3-mobile">
                 {{ post.excerpt | | strip_html | strip_newlines | truncate: 120 }}
               </div>
               <a href="{{ post.url | prepend: site.baseurl }}">
@@ -195,14 +193,14 @@ title: home
 
     </div>
       {% if paginator.total_pages > 1 %}
-  <div class="pagination">
+  <div class="pagination w3-mobile">
     {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
-      <i class="fa fa-chevron-left"></i>
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button w3-mobile" >
+      <i class="fa fa-chevron-left w3-mobile"></i>
       {{ site.theme_settings.str_prev }}
     </a>
     {% else %}
-      <span class="previous">Previous</span>
+      <span class="previous w3-mobile">Previous</span>
     {% endif %}
 
     <!-- <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span> -->
@@ -217,61 +215,59 @@ title: home
     {% endfor %}
 
     {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button w3-mobile" >
       {{ site.theme_settings.str_next }}
-      <i class="fa fa-chevron-right"></i>
+      <i class="fa fa-chevron-right w3-mobile"></i>
     </a>
     {% else %}
-      <span class="next ">Next</span>
+      <span class="next w3-mobile ">Next</span>
     {% endif %}
   </div>
   {% endif %}
   </div>
 
-  <div class="w3-half w3-white w3-container w3-text-black" style="height:700px">
+  <div class="w3-half w3-white w3-container w3-text-black w3-mobile" style="height:700px">
 
-    <div class="w3-padding-64 w3-padding-large">
+    <div class="w3-padding-64 w3-padding-large w3-mobile">
 
-      <h1 class="w3-wide">Contact</h1>
+      <h1 class="w3-wide w3-mobile"><span class="w3-mobile"><img src="/assets/SVG/hello@me.svg"/></span></h1>
       <div class="w3-row">
         <!-- Social icons from Font Awesome, if enabled -->
         <div class="w3-third w3-mobile">
-          <!-- <span id="holla" class="w3-opacity-max w3-wide">holla @ <span class="w3-text-red">.</span><span class="w3-text-cyan">me</span>!</span> -->
-          <!-- <i class="w3-large w3-magenta">{% include short-list-icons.html %}</i> -->
-          <span class="w3-opacity-mi"><img src="/assets/SVG/just-holla@me.svg"/></span>
+
           <br />
         </div>
       </div>
-      <form class="w3-container w3-card w3-padding-32 w3-black w3-margin-top" action="https://getsimpleform.com/messages?form_api_token=fe0494b3f6727a6047675242916e447 " method="post">
+      <form class="w3-container w3-card w3-padding-32 w3-black w3-margin-top w3-mobile" action="https://getsimpleform.com/messages?form_api_token=fe0494b3f6727a6047675242916e447 " method="post">
         <input type='hidden' name='redirect_to' value='https://tyrantdavis.me' />
-        <div class="w3-section  w3-text-white">
+        <div class="w3-section  w3-text-white w3-mobile">
 
-          <label class="w3-wide">Name</label>
+          <label class="w3-wide w3-mobile">Name</label>
 
-          <input class="w3-input" style="width:100%;" type="text" required name="Name">
-
-        </div>
-
-        <div class="w3-section  w3-text-white">
-
-          <label class="w3-wide">Email</label>
-
-          <input class="w3-input" style="width:100%;" type="text" required name="Email">
+          <input class="w3-input w3-mobile" style="width:100%;" type="text" required name="Name">
 
         </div>
 
-        <div class="w3-section  w3-text-white">
+        <div class="w3-section  w3-text-white w3-mobile">
 
-          <label class="w3-wide">Message</label>
+          <label class="w3-wide w3-mobile">Email</label>
 
-          <input class="w3-input" style="width:100%;" type="text" required name="Message">
+          <input class="w3-input w3-mobile" style="width:100%;" type="text" required name="Email">
 
         </div>
 
-        <button type="submit" class="w3-button w3-black w3-hover-yellow w3-right ">Send</button>
+        <div class="w3-section  w3-text-white w3-mobile">
+
+          <label class="w3-wide w3-mobile">Message</label>
+
+          <input class="w3-input w3-mobile" style="width:100%;" type="text" required name="Message">
+
+        </div>
+
+        <button type="submit" class="w3-button w3-black w3-hover-yellow w3-right  w3-mobile">Send</button>
 
       </form>
-      <p class="w3-text-night w3-wide">Thanks for saying<span class="w3-text-magenta"> Hi</span>!</p>
+      <p class="w3-text-night w3-wide w3-mobile">Thanks for saying<span class="w3-text-magenta"> Hi</span>!</p>
     </div>
   </div>
 </div>
