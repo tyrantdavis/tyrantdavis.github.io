@@ -20,11 +20,11 @@ title: home
 <!--     <a href="#" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar
      w3-topbar w3-bottombar w3-border-white w3-hover-border-white w3-padding-16">Home</a>  --> <!-- w3-border-0 w3-hover-border-white -->
 
-     <a href="#work" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar  w3-hover-border-yellow  w3-padding-16 w3-mobile">Skills & Projects</a>
+     <a href="#projects-head" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar  w3-hover-border-yellow  w3-padding-16 w3-mobile">Skills & Projects</a>
 
-      <a href="#work" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar w3-border-white w3-hover-border-cyan  w3-padding-16 w3-mobile">Resume</a>
+      <a href="#resume" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar w3-border-white w3-hover-border-cyan  w3-padding-16 w3-mobile">Resume</a>
 
-      <a href="#contact" class=" w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar w3-border-white w3-hover-border-red  w3-padding-16 w3-mobile">Posts</a>
+      <a href="#posts" class=" w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar w3-border-white w3-hover-border-red  w3-padding-16 w3-mobile">Posts</a>
 
       <a href="#contact" class="w3-btn w3-black w3-block w3-border-black w3-leftbar w3-rightbar w3-topbar w3-bottombar w3-border-white w3-hover-border-white  w3-padding-16 w3-mobile">Contact</a>
 
@@ -57,7 +57,7 @@ title: home
 
 <div class="w3-row w3-mobile">
 
-  <div class="w3-half w3-yellow w3-center w3-container home w3-mobile" style="height:800px" id="work">
+  <div class="w3-half w3-yellow w3-center w3-container home w3-mobile" style="height:800px" id="resume">
 
     <div class="w3-padding-64 w3-mobile">
 
@@ -161,13 +161,13 @@ title: home
 
 </div>
 
-<div class="w3-row posts  w3-mobile" id="contact">
+<div class="w3-row posts  w3-mobile" id="posts">
 
   <div class="w3-half w3-magenta w3-text-white w3-container w3-center w3-mobile" style="height:700px">
 
     <div class="w3-padding-64 w3-mobile">
 
-      <h1 class="w3-wide post-header w3-text-white w3-opacity-min w3-mobile">My Posts</h1>
+      <h1 class="w3-wide post-header w3-text-white w3-opacity-min w3-mobile">Some <a class="w3-xxxlarge" href="http://blog.tyrantdavis.me/">Blog</a> Posts</h1>
       <ul class="w3-ul">
             {% for post in paginator.posts %}
             <li class="post-teaser w3-round-small w3-leftbar w3-rightbar w3-hover-shadow w3-block w3-border-magenta w3-hover-border-white no-border-bottom w3-padding-16 w3-mobile" style="border-bottom: 0px">
@@ -230,7 +230,7 @@ title: home
 
     <div class="w3-padding-64 w3-padding-large w3-mobile">
 
-      <h1 class="w3-wide w3-mobile"><span class="w3-mobile"><img src="/assets/SVG/hello@me.svg"/></span></h1>
+      <h1  id="contact" class="w3-wide w3-mobile"><span class="w3-mobile"><img src="/assets/SVG/hello@me.svg"/></span></h1>
       <div class="w3-row">
         <!-- Social icons from Font Awesome, if enabled -->
         <div class="w3-third w3-mobile">
