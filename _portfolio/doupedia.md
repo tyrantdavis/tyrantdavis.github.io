@@ -8,7 +8,7 @@ short-description: "&bull; DoUpedia is a production quality SaaS web application
 
 
 <p align="center">
-  <img  src="/assets/images/doUpediaHome.png" alt="home">
+  <img  src="/assets/images/doUpedia/doUpediaHome.png" alt="home">
 </p>
 
 <h3 class="wide w3-center">Summary</h3>
@@ -58,7 +58,7 @@ I generated a Welcome controller and related views, using HTML and CSS from ther
 
 
 <p align="center">
-  <img  src="/assets/images/index.png" alt="home">
+  <img  src="/assets/images/doUpedia/index.png" alt="home">
 </p>
 
 To sign users up for the app I added user authentication by incorporating _Devise_. I then created a _Devise_ User model.
@@ -71,20 +71,20 @@ $ rails g _Devise_ user
 
 
 <p align="center">
-  <img  src="/assets/images/signup.png" alt="home">
+  <img  src="/assets/images/doUpedia/signup.png" alt="home">
 </p>
 
 _Sendgrid_ was integrated into the app which allowed the app to send confirmation emails. To securely configure Sendgrid username and password the _Figaro_ gem was used. I find myself using this gem quite a bit.  
 
 
 <p align="center">
-  <img src="/assets/images/figaro.png" alt="Figaro Logo" style="width:20%" >
+  <img src="/assets/images/doUpedia/figaro.png" alt="Figaro Logo" style="width:20%" >
 </p>
 For sign-in sign-out capabilities I used the _Devise_ helper method **`user_signed_in?`** which determined if a user was signed in and rendered a particular view based on the response. The navigation links **Edit Profile** and **Sign Out** indicated a user was signed in. The user would see the **Sign-up** or **Sign In** navigation links if not signed in.   
 
 
 <p align="center">
-  <img  src="/assets/images/login.png" alt="home">
+  <img  src="/assets/images/doUpedia/login.png" alt="home">
 </p>
 
 I generated a wiki model that references the user, plus a controller, and views for the resource. It enabled users to <span class="w3-text-magenta">Create</span>, <span class="w3-text-magenta">Read</span>, <span class="w3-text-magenta">Update</span>, and <span class="w3-text-magenta">Delete</span> public wikis.
@@ -93,7 +93,7 @@ _Faker_ was used to seed the database.
 
 
 <p align="center">
-  <img  src="/assets/images/entry.png" alt="home">
+  <img  src="/assets/images/doUpedia/entry.png" alt="home">
 </p>
 
 
