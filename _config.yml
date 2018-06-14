@@ -79,8 +79,3 @@ sass:
   style: :compressed
 
 plugins: [jekyll-paginate]
-
-exclude:
-- assets/images/SVG/
-- just-holla@me.svg
-- TDLogoForWeb.svg
