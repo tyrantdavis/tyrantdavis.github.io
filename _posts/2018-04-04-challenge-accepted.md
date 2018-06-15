@@ -1,16 +1,14 @@
 ---
 layout: posts
 title: Challenge Accepted!!
----
 
+---
+![muscle-man](/assets/SVG/muscular-man-flexing-silhouette.svg){:class="w3-responsive w3-mobile center w3-padding-large w3-opacity"}
+<p class="w3-center w3-wide w3-opacity-max w3-large"><b>Challenges faced while learning to develop.</b></p>
 <div class="w3-row-padding">
 
-    <p class="w3-center w3-padding-large">
-    <img class="w3-opacity" src="/assets/SVG/muscular-man-flexing-silhouette.svg">
-    </p>
 
   <div class="w3-half">
-  <div class="w3-center"><b><span class="w3-center w3-wide w3-opacity-max">Challenges faced while learning to develop.</span></b></div>
 
 
     <h6 class="w3-wide w3-center w3-opacity">Trying to do it all is absurd.</h6>
@@ -42,7 +40,6 @@ title: Challenge Accepted!!
   </div>
 
   <div class="w3-half">
-    <div class="w3-center"><b><span class="w3-center w3-wide w3-opacity-max">Never quit. Never surrender.</span></b></div>
 
     <h6 class="w3-wide w3-center w3-opacity">Frustration today, tomorrow, and beyond...</h6>
 
@@ -59,6 +56,8 @@ title: Challenge Accepted!!
   <p>
     <b><span class="w3-xxlarge">I</span></b> can be hard on myself at times. Surely I am not alone. I can be a perfectionist as well, and both things can be detrimental. I was especially obsessed with how my apps looked. It took some time for me to realize just how silly my thinking was. For one, I did not know enough to know how good or bad it was. Secondly, it was not my job; my job was to get things working. I am an engineer, not a designer. Sure it needed to be presentable, but obsessing over the look was unnecessary.
   </p>
+
+<h6 class="w3-wide w3-center w3-opacity">Never quit. Never surrender.</h6>
 
   <p>
     <b><span class="w3-xxlarge">L</span></b>ife got a little easier once I accepted these truths.  I hope what I have shared helps you on your journey. With a little patience and know how a person can do anything. Do not let the enormity of the moment stop you from reaching your goal of becoming a developer.  Eat the elephant one bite at a time. Stay focused and motivated.

@@ -2,14 +2,14 @@
 layout: posts
 published: true
 ---
+<p class="w3-center w3-padding-large">
+<img class="w3-opacity" src="/assets/SVG/embed2.svg">
+</p>
+<p class="w3-center w3-wide w3-opacity-max w3-large"><b>The Curious Case of...</b></p>
+
 <div class="w3-row-padding">
-
-    <p class="w3-center w3-padding-large">
-    <img class="w3-opacity" src="/assets/SVG/embed2.svg">
-    </p>
-
   <div class="w3-half">
-  <div class="w3-center"><b><span class="w3-center w3-wide w3-opacity-max">Searching for something!</span></b></div>
+    <h6 class="w3-wide w3-center w3-opacity">Searching for something!</h6>
 
     <p><b><span class="w3-xxlarge">I</span></b> am a tinkerer and naturally curious about my environment.  I remember taking apart gaming systems, computers, or anything I could get my hands on. I just had to know how things worked. That feeling still rules me. <b class="wide"><span class="w3-xxlarg">I</span></b> have always questioned my surroundings demanding to know and understand the meaning of it all.
   </p>
@@ -27,15 +27,18 @@ published: true
     <img class="w3-opacity" src="/assets/SVG/dna.svg">
     </p>
 
+  <h6 class="w3-wide w3-center w3-opacity">Seeing the circle...</h6>
   <p>
     <b class="wide"><span class="w3-xxlarge">I</span></b> eventually realized that all of life is patterns.
     Where there is a pattern there is a set of instructions for repeating a desired result. I approached everything with the concept of patterns in mind from then on. I am willing to bet this all sounds familiar to you even if you cannot put a name on the concept. I too did not fully understand that I was toying with the concept of algorithms in my earlier years.… They are everywhere and drive everything.
   </p>
 
+    <h6 class="w3-wide w3-center w3-opacity">Keep it moving!</h6>
     <p>
       <b class="wide"><span class="w3-xxlarge">F</span></b>ast forward a few years, I am working as a Health Information Technology manager. I was tasked with taking over a failing program. Once I had the program running smoothly and excelling, I became anxious and began looking for my next challenge. This was a consequence of me constantly needing a challenge to feel alive.   Many of you are probably wondering why I would transition from a managerial role into software development. Well, that position is actually were my journey into software development as a profession began.
     </p>
 
+    <h6 class="w3-wide w3-center w3-opacity">I think I'm falling.</h6>
     <p>
       <b class="wide"><span class="w3-xxlarge">I</span></b> always had an affinity for understanding the technology behind the programs I administered. I also wondered about all the technology I used daily including music production apps, games, scheduling apps, my work out apps, etc. I used and enjoyed technology so much that I felt compelled to learn about it. At times I actually felt as if I had a responsibility to learn it. That was just me putting too much pressure on myself as I often do. Was that me never letting go of the need to understand my environment? Either way, I did lots of research of the technologies behind the programs I administered daily. The more I unearthed, the more I became infatuated with software development. This eventually led me back down a path I did not realize I had started much earlier in my life. Chances are you too started down the road much earlier than you know. 
     </p>
@@ -50,7 +53,7 @@ published: true
 
 
   <div class="w3-half">
-  <div class="w3-center"><b><span class="w3-center w3-wide w3-opacity-max">Tinking about it!</span></b></div>
+    <h6 class="w3-wide w3-center w3-opacity">Tinking about it!</h6>
 
     <p>
       <b class="wide"><span class="w3-xxlarge">I</span></b> am a tinkerer with an insatiable need to open things up to understand how they work, and that is nothing more than being an explorer who is detailed. This can sometimes be to my detriment too. I have had to learn not to go further into the rabbit hole than necessary, which is easier than you think, especially when you are someone that obsesses over every little detail.  
@@ -64,12 +67,17 @@ published: true
       <b><span class="w3-xxlarge">Y</span></b>ou can probably tell that I am a lifelong learner.  That is a very important skill in software development. I love to solve problems, it is a big part of what I do enthusiastically as an operations manager; and, it was a part of what I did well as a HIT manger.  I love to challenge myself. It makes me feel alive, though it can be trying at times. It is great to have practice challenging yourself because there are challenges all the time. Trust me!
     </p>
 
+  <h6 class="w3-wide w3-center w3-opacity">Change clothes.</h6>
+
     <p>
       <b class="wide"><span class="w3-xxlarge">I</span></b>  have a breath of interests, and that suits me well in this industry.  Considering that all industries depend on technology, there is enormous value in having varied interests and a plethora of opportunities that go along with it. Innovation is found between technology and all the other interest we have in our lives.  I like to think of it as the Goldilocks Zone of ingenuity. There is another nature reference we can relate to. Best teacher ever!
     </p>
 
+
+
       <b><span class="w3-xxlarge">I</span></b> welcome change.I know it is cliché, but I do believe it is the spice of life.  Things change all the time, and quickly, in this industry. If you are adverse to change, things may be very difficult for you.
 
+  <h6 class="w3-wide w3-center w3-opacity">Completing the circle...</h6>
     <p>
       <b><span class="w3-xxlarge">I</span></b> was naturally inclined to think in terms of algorithms as evidenced in the beginning of this article. I look for patterns in everything. This is not relegated to software architecture; Patterns apply to everything in life. Lastly, I do not give up. You will need that because you will fail often, but if you have the tenacity and patience to stay with it you will eventually break through. Perseverance is paramount.  
     </p>

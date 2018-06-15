@@ -2,17 +2,18 @@
 layout: posts
 title: Engineering A Better World
 ---
-
-<div class="w3-row-padding">
-
 <p class="w3-center w3-opacity-max w3-padding-large">
 <img class="fas fa-sitemap fa-5x w3-padding-special">
 <img class="fas fa-terminal fa-5x w3-padding-special">
 <img class="fas fa-globe fa-5x w3-padding-special">
 </p>
-  <div class="w3-half">
-  <div class="w3-center"><b><span class="w3-center w3-wide w3-opacity-max">puts  ' Hello World! '</span></b></div>
+<p class="w3-center w3-wide w3-opacity-max w3-large"><b>puts  ' Hello World! '</b></p>
+<div class="w3-row-padding">
 
+
+
+  <div class="w3-half">
+<h6 class="w3-wide w3-center w3-opacity">Do what?</h6>
 <p class="center">"<b><span class="w3-xxlarge">A</span></b> software engineer is a person who applies the principles of software engineering to the design, development, maintenance, testing, and evaluation of the software that make computers or other devices containing software work.”
 <a href="https://en.wikipedia.org/wiki/Software_engineer" class="w3-text-cyan">Wikipedia.org</a>
 </p>
@@ -42,7 +43,7 @@ Big changes have happened to the hospitality and travel industry because of site
 <p>
  Hospitals are using technology to enable patients to triage themselves upon arriving to speed up hospital wait times. 
 </p>
-<h4 class="w3-center w3-opacity-max w3-wide">So how does it help?</h4>
+  <h6 class="w3-wide w3-center w3-opacity">So how does it help?</h6>
 
 <b><span class="w3-xxlarge">A</span></b>utonomous vehicles could make our roads much safer because of technology.  Vehicles are steadily providing better safety features because of engineering.
 
@@ -67,7 +68,7 @@ Big changes have happened to the hospitality and travel industry because of site
   </div>
 
   <div class="w3-half">
-  <div class="w3-center"><b><span class="w3-center w3-wide w3-opacity-max">Big Data and The Internet of Things</span></b></div>
+  <h6 class="w3-wide w3-center w3-opacity">Big Data and The Internet of Things</h6>
 
 <p>
 <b><span class="w3-xxlarge">T</span></b>he Internet Of Things is changing our lives and making everything smarter.  It allows us to design and build smarter homes, for example.  It is also impacting sports. Teams are using sensors on athletic equipment and on athletes that provide performance feedback. Even sports venues are impacted by the Internet Of Things. It is still a fairly new paradigm, but the potential is enormous. 
