@@ -1,18 +1,18 @@
 ---
 layout: project
-title: doUpedia
+title: Mocpedia
 thumbnail-path: ""
-short-description: "&bull; DoUpedia is a production quality SaaS web application which allows users to create public and private Markdown based wikis and share them with other collaborators. &bull; Built on Rails &bull; Incorporates  Stripe, Devise, Redcarpet, Pundit, Sendgrid, Figaro, and Faker"
+short-description: "&bull; Mocpedia is a production quality SaaS web application which allows users to create public and private Markdown based wikis and share them with other collaborators. &bull; Built on Rails &bull; Incorporates  Stripe, Devise, Redcarpet, Pundit, Sendgrid, Figaro, and Faker"
 
 ---
 
 
 <p align="center">
-  <img  src="/assets/images/doUpedia/doUpediaHome.png" alt="home">
+  <img  src="/assets/images/doUpedia/mocpediaHome.png" alt="home">
 </p>
 
 <h3 class="wide w3-center">Summary</h3>
-**doUpedia** is a production quality _SaaS_ web application which allows users to create public and private Markdown based wikis and share them with other collaborators.
+**Mocpedia** is a production quality _SaaS_ web application which allows users to create public and private Markdown based wikis and share them with other collaborators.
 
 <h3 class="wide w3-center">Explanation</h3>
 
@@ -34,7 +34,7 @@ The aim for this project was to further my backend knowledge and skills of Ruby 
 <h3 class="wide  w3-center">User Requirements</h3>
 
 1. Allow users to sign up for a free account by providing a user name, password and email
-2. Allow users to sign in and out of DoUpedia
+2. Allow users to sign in and out of Mocpedia
 3. Allow users with a standard account to create, read, update, and delete public wikis
 4. Provide three user roles: admin, standard, or premium
 5. Allow user to upgrade account from a free to a paid plan
